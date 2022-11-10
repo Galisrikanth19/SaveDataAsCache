@@ -13,6 +13,7 @@
 		2D7DF11D291D0B1A00AB6D4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DF11B291D0B1A00AB6D4C /* Main.storyboard */; };
 		2D7DF11F291D0B1C00AB6D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DF11E291D0B1C00AB6D4C /* Assets.xcassets */; };
 		2D7DF122291D0B1C00AB6D4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D7DF120291D0B1C00AB6D4C /* LaunchScreen.storyboard */; };
+		876383B6561F02CD565927E7 /* Pods_SaveDataAsCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7556EE3B88F26B7944F89CCB /* Pods_SaveDataAsCache.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		2D7DF11E291D0B1C00AB6D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D7DF121291D0B1C00AB6D4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D7DF123291D0B1C00AB6D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7556EE3B88F26B7944F89CCB /* Pods_SaveDataAsCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SaveDataAsCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78565FBE39C23C227AD4F2DC /* Pods-SaveDataAsCache.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveDataAsCache.release.xcconfig"; path = "Target Support Files/Pods-SaveDataAsCache/Pods-SaveDataAsCache.release.xcconfig"; sourceTree = "<group>"; };
+		9185BB9DB218C5AAF8FD2A2F /* Pods-SaveDataAsCache.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SaveDataAsCache.debug.xcconfig"; path = "Target Support Files/Pods-SaveDataAsCache/Pods-SaveDataAsCache.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876383B6561F02CD565927E7 /* Pods_SaveDataAsCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17AC6AC2B0A95848656508F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7556EE3B88F26B7944F89CCB /* Pods_SaveDataAsCache.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2D7DF109291D0B1A00AB6D4C = {
 			isa = PBXGroup;
 			children = (
 				2D7DF114291D0B1A00AB6D4C /* SaveDataAsCache */,
 				2D7DF113291D0B1A00AB6D4C /* Products */,
+				FFA86E8E4F63DD97E8271C52 /* Pods */,
+				17AC6AC2B0A95848656508F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = SaveDataAsCache;
 			sourceTree = "<group>";
 		};
+		FFA86E8E4F63DD97E8271C52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9185BB9DB218C5AAF8FD2A2F /* Pods-SaveDataAsCache.debug.xcconfig */,
+				78565FBE39C23C227AD4F2DC /* Pods-SaveDataAsCache.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D7DF126291D0B1C00AB6D4C /* Build configuration list for PBXNativeTarget "SaveDataAsCache" */;
 			buildPhases = (
+				537B376C1BC3E6E9F13E2D3E /* [CP] Check Pods Manifest.lock */,
 				2D7DF10E291D0B1A00AB6D4C /* Sources */,
 				2D7DF10F291D0B1A00AB6D4C /* Frameworks */,
 				2D7DF110291D0B1A00AB6D4C /* Resources */,
+				A6F2F6D241B37D27CF4411F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		537B376C1BC3E6E9F13E2D3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SaveDataAsCache-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6F2F6D241B37D27CF4411F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SaveDataAsCache/Pods-SaveDataAsCache-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SaveDataAsCache/Pods-SaveDataAsCache-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SaveDataAsCache/Pods-SaveDataAsCache-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D7DF10E291D0B1A00AB6D4C /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		2D7DF127291D0B1C00AB6D4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9185BB9DB218C5AAF8FD2A2F /* Pods-SaveDataAsCache.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		2D7DF128291D0B1C00AB6D4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78565FBE39C23C227AD4F2DC /* Pods-SaveDataAsCache.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

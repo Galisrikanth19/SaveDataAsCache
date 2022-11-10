@@ -1,0 +1,6 @@
+framework module Pods_SaveDataAsCache {
+  umbrella header "Pods-SaveDataAsCache-umbrella.h"
+
+  export *
+  module * { export * }
+}
