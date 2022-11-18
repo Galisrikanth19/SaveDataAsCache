@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,8 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-qY-41p">
-                                <rect key="frame" x="138.5" y="94" width="137" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="127" y="68" width="160" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="wUy-mg-FwP"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Save Data as Cache">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -28,8 +32,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKh-ft-XoS">
-                                <rect key="frame" x="145.5" y="174" width="123" height="30"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <rect key="frame" x="127" y="118" width="160" height="30"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Fetch Cache Data">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -42,10 +46,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JKh-ft-XoS" firstAttribute="top" secondItem="jeA-qY-41p" secondAttribute="bottom" constant="50" id="7ee-uh-ukc"/>
+                            <constraint firstItem="JKh-ft-XoS" firstAttribute="top" secondItem="jeA-qY-41p" secondAttribute="bottom" constant="20" id="7ee-uh-ukc"/>
                             <constraint firstItem="JKh-ft-XoS" firstAttribute="centerX" secondItem="jeA-qY-41p" secondAttribute="centerX" id="DFn-2s-Jro"/>
                             <constraint firstItem="jeA-qY-41p" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="St1-qf-luL"/>
-                            <constraint firstItem="jeA-qY-41p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="bZ3-mY-XQO"/>
+                            <constraint firstItem="jeA-qY-41p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bZ3-mY-XQO"/>
+                            <constraint firstItem="JKh-ft-XoS" firstAttribute="width" secondItem="jeA-qY-41p" secondAttribute="width" id="u3F-T5-Q8Y"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -60,6 +65,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

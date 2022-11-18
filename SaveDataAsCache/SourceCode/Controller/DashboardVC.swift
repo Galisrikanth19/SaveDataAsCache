@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DashboardVC.swift
 //  SaveDataAsCache
 //
 //  Created by Webappclouds on 11/10/22.
@@ -8,15 +8,15 @@
 import UIKit
 import Cache
 
-class ViewController: UIViewController {
+class DashboardVC: UIViewController {
     let cacheKey = "keyName"
-    var storage: Storage<String, User> {
+    var storage: Storage<String, UserModel> {
         let diskConfig = DiskConfig(name: "LocalDisk")
         let memoryConfig = MemoryConfig(expiry: .never, countLimit: 0, totalCostLimit: 0)
-        let storage = try! Storage<String, User>(
+        let storage = try! Storage<String, UserModel>(
                   diskConfig: diskConfig,
                   memoryConfig: memoryConfig,
-                  transformer: TransformerFactory.forCodable(ofType: User.self))
+                  transformer: TransformerFactory.forCodable(ofType: UserModel.self))
         return storage
     }
     
@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveUserDetails(_ sender: UIButton) {
-        let userM = User(firstName: "John", lastName: "Snow")
+        let userM = UserModel(firstName: "John", lastName: "Snow")
         do {
             try self.storage.setObject(userM, forKey: cacheKey)
         } catch {
@@ -41,9 +41,4 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-}
-
-struct User: Codable {
-  let firstName: String?
-  let lastName: String?
 }
